@@ -767,7 +767,7 @@ class SpotROS:
 
         try:
             self._send_trajectory_command(
-                self._transform_pose_to_body_frame(msg), rospy.Duration(5)
+                self._transform_pose_to_body_frame(msg), rospy.Duration(10)
             )
         except tf2_ros.LookupException as e:
             rospy.logerr(str(e))
